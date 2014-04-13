@@ -1,0 +1,48 @@
+<systemdata>
+	<group0>
+		<name10 type='0'>
+			<id>10</id>
+			<min>0</min>
+			<max>1</max>
+			<precision>0</precision>
+			<unit>rpm</unit>
+			<readonly>true</readonly>
+		</name10>
+		<name21 type='0'>
+			<id>21</id>
+			<min>0</min>
+			<max>1000</max>
+			<precision>-1</precision>
+			<unit>rpm</unit>
+			<readonly>false</readonly>
+		</name21>
+		<group01>
+			<name42 type='0'>
+				<id>42</id>
+				<min>0</min>
+				<max>1000</max>
+				<precision>-4</precision>
+				<unit>sccm</unit>
+				<readonly>true</readonly>
+			</name42>
+		</group01>
+	</group0>
+	<group1>
+		<name53 type='0'>
+			<id>53</id>
+			<min>0</min>
+			<max>1</max>
+			<precision>0</precision>
+			<unit>rpm</unit>
+			<readonly>false</readonly>
+		</name53>
+		<name34 type='0'>
+			<id>34</id>
+			<min>0</min>
+			<max>1000</max>
+			<precision>0</precision>
+			<unit></unit>
+			<readonly>true</readonly>
+		</name34>
+	</group1>
+</systemdata>

@@ -1,0 +1,56 @@
+<parameters>
+	<group0>
+		<name50 type='0'>
+			<id>50</id>
+			<description>fafdfadf</description>
+			<min>0</min>
+			<max>1000</max>
+			<default>50</default>
+			<unit>rpm</unit>
+		</name50>
+		<name71 type='0'>
+			<id>71</id>
+			<description>fafdfadf</description>
+			<min>0</min>
+			<max>1000</max>
+			<default>50</default>
+			<unit>rpm</unit>
+		</name71>
+		<name27 type='0'>
+			<id>27</id>
+			<description>fafdfadf</description>
+			<min>0</min>
+			<max>1000</max>
+			<default>50</default>
+			<unit>sccm</unit>
+		</name27>
+		<group01>
+			<name99 type='0'>
+				<id>99</id>
+				<description>fafdfadf</description>
+				<min>0</min>
+				<max>1000</max>
+				<default>50</default>
+				<unit></unit>
+			</name99>
+		</group01>
+	</group0>
+	<group1>
+		<name63 type='0'>
+			<id>63</id>
+			<description>fafdfadf</description>
+			<min>0</min>
+			<max>1000</max>
+			<default>50ii</default>
+			<unit>rpm</unit>
+		</name63>
+		<name94 type='0'>
+			<id>94</id>
+			<description>fafdfadf</description>
+			<min>0</min>
+			<max>1000</max>
+			<default>50</default>
+			<unit></unit>
+		</name94>
+	</group1>
+</parameters>

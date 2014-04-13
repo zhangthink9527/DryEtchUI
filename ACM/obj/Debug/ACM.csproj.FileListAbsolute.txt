@@ -1,0 +1,5 @@
+F:\ACM\Code\ACM\ACM\bin\ACM.dll
+F:\ACM\Code\ACM\ACM\bin\ACM.pdb
+F:\ACM\Code\ACM\ACM\obj\Debug\ACM.dll
+F:\ACM\Code\ACM\ACM\obj\Debug\ACM.pdb
+F:\ACM\Code\ACM\ACM\obj\Debug\ACM.csprojResolveAssemblyReference.cache

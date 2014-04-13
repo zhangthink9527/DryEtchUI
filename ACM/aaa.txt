@@ -1,0 +1,11 @@
+    //    var obj = getSyncJsonData();
+    //    var i = 0;
+    //    setInterval(function () {
+    //        if (obj.parameters.length > i) {
+    //            document.writeln(i);
+    //            i = i + 1;
+    //        }
+    //        else {
+    //            document.writeln("ac ");
+    //        }
+    //    }, 500);

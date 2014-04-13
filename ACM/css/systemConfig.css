@@ -1,0 +1,42 @@
+﻿  #tree, #tree ul
+        {
+            list-style-type: none;
+        }
+        
+        #tree li > span
+        {
+            margin-left: 20px;
+        }
+        
+        #tree li > .toggle
+        {
+            position: absolute;
+            display: inline-block;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 16px;
+            width: 16px;
+            cursor: pointer;
+        }
+        
+        #tree li > div.closed
+        {
+            background-image: url(../images/expand_icon.png);
+        }
+        
+        #tree li > div.open
+        {
+            background-image: url(../images/contract_icon.png);
+        }
+        
+        .focus
+        {
+            background-color: #eee;
+        }
+        
+        #data
+        {
+            position: absolute;
+      left: 200px;
+ top: 20px;
+        }
