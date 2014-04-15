@@ -13,7 +13,7 @@
 
        function getSyncXmlData() {
            var fs = require('fs');
-           var str = fs.readFileSync('./data/parameters.xml');
+           var str = fs.readFileSync('./../data/parameters.xml');
            var parser = new DOMParser();
            return parser.parseFromString(str, "text/xml");
        }

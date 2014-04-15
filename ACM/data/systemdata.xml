@@ -1,48 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
 <systemdata>
-	<group0>
-		<name10 type='0'>
-			<id>10</id>
-			<min>0</min>
-			<max>1</max>
-			<precision>0</precision>
-			<unit>rpm</unit>
-			<readonly>true</readonly>
-		</name10>
-		<name21 type='0'>
-			<id>21</id>
-			<min>0</min>
-			<max>1000</max>
-			<precision>-1</precision>
-			<unit>rpm</unit>
-			<readonly>false</readonly>
-		</name21>
-		<group01>
-			<name42 type='0'>
-				<id>42</id>
-				<min>0</min>
-				<max>1000</max>
-				<precision>-4</precision>
-				<unit>sccm</unit>
-				<readonly>true</readonly>
-			</name42>
-		</group01>
-	</group0>
-	<group1>
-		<name53 type='0'>
-			<id>53</id>
-			<min>0</min>
-			<max>1</max>
-			<precision>0</precision>
-			<unit>rpm</unit>
-			<readonly>false</readonly>
-		</name53>
-		<name34 type='0'>
-			<id>34</id>
-			<min>0</min>
-			<max>1000</max>
-			<precision>0</precision>
-			<unit></unit>
-			<readonly>true</readonly>
-		</name34>
-	</group1>
+  <DI>
+    <diAlcPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>1</id>
+      <unit></unit>
+    </diAlcPrsULmt>
+    <diAlcPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>2</id>
+      <unit></unit>
+    </diAlcPrsLLmt>
+    <diAlcTkPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>3</id>
+      <unit></unit>
+    </diAlcTkPrsULmt>
+    <diAlcTkPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>4</id>
+      <unit></unit>
+    </diAlcTkPrsLLmt>
+    <diHFSplPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>5</id>
+      <unit></unit>
+    </diHFSplPrsULmt>
+    <diHFSplPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>6</id>
+      <unit></unit>
+    </diHFSplPrsLLmt>
+    <diN2PgHFPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>7</id>
+      <unit></unit>
+    </diN2PgHFPrsULmt>
+    <diN2PgHFPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>8</id>
+      <unit></unit>
+    </diN2PgHFPrsLLmt>
+    <diN2PgAlcTkPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>9</id>
+      <unit></unit>
+    </diN2PgAlcTkPrsULmt>
+    <diN2PgAlcTkPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>10</id>
+      <unit></unit>
+    </diN2PgAlcTkPrsLLmt>
+    <diN2PgExpCbPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>11</id>
+      <unit></unit>
+    </diN2PgExpCbPrsULmt>
+    <diN2PgExpCbPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>12</id>
+      <unit></unit>
+    </diN2PgExpCbPrsLLmt>
+    <diN2SplVPumpPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>13</id>
+      <unit></unit>
+    </diN2SplVPumpPrsULmt>
+    <diN2SplVPumpPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>14</id>
+      <unit></unit>
+    </diN2SplVPumpPrsLLmt>
+    <diN2PgPrcCbPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>15</id>
+      <unit></unit>
+    </diN2PgPrcCbPrsULmt>
+    <diN2PgPrcCbPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>16</id>
+      <unit></unit>
+    </diN2PgPrcCbPrsLLmt>
+    <diN2FacSplPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>17</id>
+      <unit></unit>
+    </diN2FacSplPrsULmt>
+    <diN2FacSplPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>18</id>
+      <unit></unit>
+    </diN2FacSplPrsLLmt>
+    <diN2PgVapPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>19</id>
+      <unit></unit>
+    </diN2PgVapPrsULmt>
+    <diN2PgVapPrsLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>20</id>
+      <unit></unit>
+    </diN2PgVapPrsLLmt>
+    <diCDAInletAlarm type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>21</id>
+      <unit></unit>
+    </diCDAInletAlarm>
+    <diFacVPrsSwtLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>22</id>
+      <unit></unit>
+    </diFacVPrsSwtLLmt>
+    <diExpCbVPrsSwtULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>23</id>
+      <unit></unit>
+    </diExpCbVPrsSwtULmt>
+    <diExpCbVPrsSwtLLmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>24</id>
+      <unit></unit>
+    </diExpCbVPrsSwtLLmt>
+    <diIODoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>25</id>
+      <unit></unit>
+    </diIODoorClose>
+    <diPCDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>26</id>
+      <unit></unit>
+    </diPCDoorClose>
+    <diPneuDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>27</id>
+      <unit></unit>
+    </diPneuDoorClose>
+    <diAcFrmDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>28</id>
+      <unit></unit>
+    </diAcFrmDoorClose>
+    <diAcDoorOverride type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>29</id>
+      <unit></unit>
+    </diAcDoorOverride>
+    <diVaporMHeaterAlarm type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>30</id>
+      <unit></unit>
+    </diVaporMHeaterAlarm>
+    <diVaporVHeaterAlarm type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>31</id>
+      <unit></unit>
+    </diVaporVHeaterAlarm>
+    <diHFReady type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>32</id>
+      <unit></unit>
+    </diHFReady>
+    <diHeartbeatFail type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>33</id>
+      <unit></unit>
+    </diHeartbeatFail>
+    <diExhaustAlarm type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>34</id>
+      <unit></unit>
+    </diExhaustAlarm>
+    <diFacInletVPrsULmt type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>35</id>
+      <unit></unit>
+    </diFacInletVPrsULmt>
+    <diAlcoholLeak type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>36</id>
+      <unit></unit>
+    </diAlcoholLeak>
+    <diPrcCbVacuum type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>37</id>
+      <unit></unit>
+    </diPrcCbVacuum>
+    <diPrcCbDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>38</id>
+      <unit></unit>
+    </diPrcCbDoorClose>
+    <diAlcoholGasLeak type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>39</id>
+      <unit></unit>
+    </diAlcoholGasLeak>
+    <diGasboxDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>40</id>
+      <unit></unit>
+    </diGasboxDoorClose>
+    <diDoorOverride type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>41</id>
+      <unit></unit>
+    </diDoorOverride>
+    <diInterlockReset type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>42</id>
+      <unit></unit>
+    </diInterlockReset>
+    <diHFLeak type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>43</id>
+      <unit></unit>
+    </diHFLeak>
+    <diThrottleValveOpen type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>44</id>
+      <unit></unit>
+    </diThrottleValveOpen>
+    <diHWInterlock type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>45</id>
+      <unit></unit>
+    </diHWInterlock>
+    <diAlcTkLow type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>46</id>
+      <unit></unit>
+    </diAlcTkLow>
+    <diAlcTkHigh type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>47</id>
+      <unit></unit>
+    </diAlcTkHigh>
+    <diAlcTkHighHigh type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>48</id>
+      <unit></unit>
+    </diAlcTkHighHigh>
+    <diAlcTkOverfill type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>49</id>
+      <unit></unit>
+    </diAlcTkOverfill>
+    <diVPumpWarning type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>50</id>
+      <unit></unit>
+    </diVPumpWarning>
+    <diVPumpAlarm type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>51</id>
+      <unit></unit>
+    </diVPumpAlarm>
+    <diPrcCbDoorOpen type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>60</id>
+      <unit></unit>
+    </diPrcCbDoorOpen>
+    <diWaferPickUp type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>61</id>
+      <unit></unit>
+    </diWaferPickUp>
+    <diWaferPickDown type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>62</id>
+      <unit></unit>
+    </diWaferPickDown>
+    <diWaferClamp type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>63</id>
+      <unit></unit>
+    </diWaferClamp>
+    <diWaferUnclamp type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>64</id>
+      <unit></unit>
+    </diWaferUnclamp>
+    <diArmInPos type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>65</id>
+      <unit></unit>
+    </diArmInPos>
+    <diArmOutPos type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>66</id>
+      <unit></unit>
+    </diArmOutPos>
+    <diPrcCbLidLeftOpen type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>67</id>
+      <unit></unit>
+    </diPrcCbLidLeftOpen>
+    <diPrcCbLidLeftClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>68</id>
+      <unit></unit>
+    </diPrcCbLidLeftClose>
+    <diPrcCbLidRightOpen type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>69</id>
+      <unit></unit>
+    </diPrcCbLidRightOpen>
+    <diPrcCbLidRightClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>70</id>
+      <unit></unit>
+    </diPrcCbLidRightClose>
+    <diCbLeftDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>76</id>
+      <unit></unit>
+    </diCbLeftDoorClose>
+    <diCbRightDoorClose type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>True</readonly>
+      <id>77</id>
+      <unit></unit>
+    </diCbRightDoorClose>
+  </DI>
+  <DO>
+    <aoRedLight type="0">
+      <min>0</min>
+      <max>0x101</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1000</id>
+      <unit></unit>
+    </aoRedLight>
+    <aoYellowLight type="0">
+      <min>0</min>
+      <max>0x101</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1001</id>
+      <unit></unit>
+    </aoYellowLight>
+    <aoGreenLight type="0">
+      <min>0</min>
+      <max>0x101</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1002</id>
+      <unit></unit>
+    </aoGreenLight>
+    <aoBlueLight type="0">
+      <min>0</min>
+      <max>0x101</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1003</id>
+      <unit></unit>
+    </aoBlueLight>
+    <aoBuzzer type="0">
+      <min>0</min>
+      <max>0x101</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1004</id>
+      <unit></unit>
+    </aoBuzzer>
+    <doHeartbeat type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1005</id>
+      <unit></unit>
+    </doHeartbeat>
+    <doEnableVPump type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1006</id>
+      <unit></unit>
+    </doEnableVPump>
+    <doHFRequest type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1007</id>
+      <unit></unit>
+    </doHFRequest>
+    <doExpCbVacValve type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1013</id>
+      <unit></unit>
+    </doExpCbVacValve>
+    <doExpCbVapVacValve type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1014</id>
+      <unit></unit>
+    </doExpCbVapVacValve>
+    <doAlcMFCBypassValve1 type="0">
+      <min>0</min>
+      <max>1</max>
+      <precision>0</precision>
+      <readonly>False</readonly>
+      <id>1016</id>
+      <unit></unit>
+    </doAlcMFCBypassValve1>
+  </DO>
 </systemdata>
