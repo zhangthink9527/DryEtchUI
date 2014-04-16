@@ -28,15 +28,17 @@ function addOneStep()
 						'<li><input type="text" value="0"/></li>' +
 						'<li>' +
 							'<select>' +
-								'<option value="true">true</option>' +
-								'<option value="false">false</option>' +
+								'<option value="none">none</option>' +
+								'<option value="chamber">chamber</option>' +
+								'<option value="By pass">By pass</option>' +
 							'</select>' +
 						'</li>' +
 						'<li><input type="text" value="0"/></li>' +
 						'<li>' +
 							'<select>' +
-								'<option value="true">true</option>' +
-								'<option value="false">false</option>' +
+								'<option value="none">none</option>' +
+								'<option value="chamber">chamber</option>' +
+								'<option value="By pass">By pass</option>' +
 							'</select>' +
 						'</li>' +
 						'<li><input type="text" value="0"/></li>' +
@@ -268,43 +270,56 @@ function showSelectRecipe(fs, This)
 						'<li><input type="text" value="' + steps[i].Pressure + '"/></li>' +
 						'<li><input type="text" value="' + steps[i]["Rotate Speed"] + '"/></li>' +
 						'<li>';
-			if (steps[i]["HF Bypass"] == "true")
+			var select1 = "";
+			var select2 = "";
+			var select3 = "";
+			switch (steps[i]["HF Bypass"])
 			{
-				steplist += '<select>' +
-								'<option value="true" selected = "selected">true</option>' +
-								'<option value="false">false</option>' +
-							'</select>';
+				case 'none':
+					select1 = 'selected = "selected"';
+					break;
+				case 'chamber':
+					select2 = 'selected = "selected"';
+					break;
+				case 'By pass':
+					select3 = 'selected = "selected"';
+					break;
+				default:
 			}
-			else
+			
+			steplist += '<select>' +
+							'<option value="none" ' + select1 + '>none</option>' +
+							'<option value="chamber" ' + select2 + '>chamber</option>' +
+							'<option value="By pass" ' + select3 + '>By pass</option>' +
+						'</select>' + 
+					'</li>' +
+					'<li><input type="text" value="' + steps[i]["HF"] + '"/></li>';
+			
+			select1 = "";
+			select2 = "";
+			select3 = "";
+			switch (steps[i]["EtOH Bypass"])
 			{
-				steplist += '<select>' +
-								'<option value="true">true</option>' +
-								'<option value="false" selected = "selected">false</option>' +
-							'</select>';
+				case 'none':
+					select1 = 'selected = "selected"';
+					break;
+				case 'chamber':
+					select2 = 'selected = "selected"';
+					break;
+				case 'By pass':
+					select3 = 'selected = "selected"';
+					break;
+				default:
 			}
-					
-			steplist +='</li>' +
-						'<li><input type="text" value="' + steps[i]["HF"] + '"/></li>';
-			if (steps[i]["EtOH Bypass"] == "true")
-			{
-				steplist += '<li>' +
-								'<select>' +
-									'<option value="true" selected = "selected">true</option>' +
-									'<option value="false">false</option>' +
-								'</select>' +
-							'</li>';
-			}
-			else
-			{
-				steplist += '<li>' +
-								'<select>' +
-									'<option value="true">true</option>' +
-									'<option value="false" selected = "selected">false</option>' +
-								'</select>' +
-							'</li>';
-			}
-					
-			steplist += '<li><input type="text" value="' + steps[i]["EtOH"] + '"/></li>' +
+			
+			steplist += '<li>' +
+							'<select>' +
+								'<option value="none" ' + select1 + '>none</option>' +
+								'<option value="chamber" ' + select2 + '>chamber</option>' +
+								'<option value="By pass" ' + select3 + '>By pass</option>' +
+							'</select>' +
+						'</li>' +
+						'<li><input type="text" value="' + steps[i]["EtOH"] + '"/></li>' +
 						'<li><input type="text" value="' + steps[i]["N2"] + '"/></li>' +
 						'<li><input type="text" value="' + steps[i]["N2 Purge"] + '"/></li>' +
 						'</ul>' +
