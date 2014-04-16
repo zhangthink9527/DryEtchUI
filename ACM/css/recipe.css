@@ -152,7 +152,7 @@ body
 	padding-left : 10px;
 	color : #fff;
 	font-size : 14px;
-	height : 30px;
+	height : 26px;
 }
 
 .recipevaluebox
@@ -226,6 +226,12 @@ body
 	background-color : #C6F0FB;
 	border : none;
 	padding-left : 3px;
+}
+
+.recipevalue ul  li  > select
+{
+	width : 94%;
+	padding-left : 0px;
 }
 
 .recipebtn   button
