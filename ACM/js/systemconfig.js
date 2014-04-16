@@ -28,6 +28,27 @@ function bindClick() {
         };
     });
 }
+
+function buttonClick(obj) {
+    var min = parseInt(obj.getAttribute("min"));
+    console.log("min:" + min);
+    var max = parseInt(obj.getAttribute("max"));
+    console.log("max:" + max);
+    console.log("value:" + $("#" + obj.getAttribute("txtID")).val());
+    var value = Number($("#" + obj.getAttribute("txtID")).val());
+    console.log("value:" + value);
+    if (!isNaN(value)) {
+        if (value > max || value < min) {
+            alert("请输入正确范围的值");
+        }
+        else {
+            alert("输入成功");
+        }
+    }
+    else {
+        alert("请输入合法字符")
+    }
+}
 function isLeaf(node) {
     var _isLeaf = true;
     for (var i = 0; i < node.children.length; i++) {
@@ -76,10 +97,12 @@ function getHtml(node, element) {
 function createFromGroup(node) {
     for (var i = 0; i < node.children.length; i++) {
         if (node.children[i].attributes.length > 0) {
-            createData(node.children[i], i);
+            createDataEx(node.children[i], i);
         }
     }
 }
+
+
 
 
 function createData(node,i) {
@@ -141,4 +164,20 @@ function createData(node,i) {
     div.appendChild(unit);
     div.appendChild(button);
     document.getElementById("data").appendChild(div);
+}
+
+function getContent(title,name, text,unit, min, max,i) {
+    return '<div><span title="' + title + '">' + name + ':<input  type="text" id="textbox' + i + '" value="' + text + '" />' + unit
+     + '<input max="' + max + '" min="' + min + '"  txtID="textbox' + i + '" type="button" onclick="buttonClick(this);" value="set" /></span></div>';
+}
+
+function createDataEx(node, i) {
+    var unitText;
+    if (node.children[5].textContent == "") {
+        unitText = "   ";
+    }
+    else {
+        unitText = node.children[5].textContent;
+    }
+    $("#data").append(getContent(node.children[1].textContent, node.nodeName, node.children[4].textContent, unitText, node.children[2].textContent, node.children[3].textContent,i));
 }

@@ -50,12 +50,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\gasbox.css" />
     <Content Include="css\overview.css" />
     <Content Include="css\systemConfig.css" />
     <Content Include="data\parameters.xml" />
     <Content Include="data\systemdata.xml" />
     <Content Include="images\broken.png" />
     <Content Include="images\chamber.png" />
+    <Content Include="images\chemical_flow.png" />
+    <Content Include="images\chemical_flow1.png" />
     <Content Include="images\contract_icon.png" />
     <Content Include="images\dummy.png" />
     <Content Include="images\empty.png" />
@@ -72,6 +75,7 @@
     <Content Include="images\unprocessed.png" />
     <Content Include="js\common.js" />
     <Content Include="js\exporting.js" />
+    <Content Include="js\gasbox.js" />
     <Content Include="js\goodtree.plugin.js" />
     <Content Include="js\highcharts.js" />
     <Content Include="js\historydata.js" />
