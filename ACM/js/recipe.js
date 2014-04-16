@@ -114,6 +114,8 @@ function pasteStep()
 	{
 		num = 1;
 	}
+	
+	var length = ClipBoard.length;
 	while (0 != ClipBoard.length)
 	{
 		var This = ClipBoard.shift().cloneNode(true);
@@ -124,32 +126,40 @@ function pasteStep()
 		num = num + 1;
 	}
 	
-	jQuery(".recipeselect").css("color", "#AF0505");
-	jQuery(".recipeselect").attr("isSave", "false");
-	
-	jQuery(".recipevaluebox").children("div").children("div").children("ul").find("input").change(function() {
+	if (0 != length)
+	{
+		jQuery(".recipeselect").css("color", "#AF0505");
+		jQuery(".recipeselect").attr("isSave", "false");
+		
+		jQuery(".recipevaluebox").children("div").children("div").children("ul").find("input").change(function() {
+				jQuery(".recipeselect").css("color", "#AF0505");
+				jQuery(".recipeselect").attr("isSave", "false");
+			});
+			
+		jQuery(".recipevaluebox").find("select").change(function() {
 			jQuery(".recipeselect").css("color", "#AF0505");
 			jQuery(".recipeselect").attr("isSave", "false");
 		});
-		
-	jQuery(".recipevaluebox").find("select").change(function() {
-		jQuery(".recipeselect").css("color", "#AF0505");
-		jQuery(".recipeselect").attr("isSave", "false");
-	});
+	}
 }
 
 function cutStep()
 {
+	var flag = false;
 	jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
 		if (jQuery(this).find("span").find("input")[0].checked)
 		{
+			flag = true;
 			ClipBoard.push(this);
 			jQuery(this).remove();
 		}
 	});
 	
-	jQuery(".recipeselect").css("color", "#AF0505");
-	jQuery(".recipeselect").attr("isSave", "false");
+	if (flag)
+	{
+		jQuery(".recipeselect").css("color", "#AF0505");
+		jQuery(".recipeselect").attr("isSave", "false");
+	}
 }
 
 function loadRecipe()
