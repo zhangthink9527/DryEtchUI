@@ -9,22 +9,69 @@
     <script language="javascript" type="text/javascript" src="../js/jquery.contextmenu.r2.packed.js"></script>
 </head>
 <body id="body">
-    <input id="btnRun" type="button" value="AutoRun" />
-    <div id="background">
-    </div>
-    <div id="firstWinfer" class="broken">
-    </div>
-    <div id="secondWinfer" class="semiprocessed">
-    </div>
-    <div id="thirdWinfer" class="processing">
-    </div>
-      <div class="contextMenu" id="myMenu1">
-      <ul>
-        <li id="forward">forward</li>
-        <li id="back">back</li>
-        <li id="close">close</li>
-        <li id="open">open</li>
-      </ul>
-    </div>
+	<div class="overview">
+		<div class="logo">
+		</div>
+		<table>
+			<tr>
+				<td class="overview_turntable">
+					<input id="btnRun" type="button" value="AutoRun" />
+					<div id="background">
+					</div>
+					<div id="firstWinfer" class="broken">
+					</div>
+					<div id="secondWinfer" class="semiprocessed">
+					</div>
+					<div id="thirdWinfer" class="processing">
+					</div>
+					  <div class="contextMenu" id="myMenu1">
+					  <ul>
+						<li id="forward">forward</li>
+						<li id="back">back</li>
+						<li id="close">close</li>
+						<li id="open">open</li>
+					  </ul>
+					</div>
+				</td>
+				<td class="overview_opreation" align="top">
+					<div class="overview_info" >
+						<table cellspacing="1">
+							<tr>
+								<td class="overview_info_1">Wafers Run:</td>
+								<td class="overview_info_2">8</td>
+							</tr>
+							<tr>
+								<td class="overview_info_1">Continuous Throughput (w/h):</td>
+								<td class="overview_info_2">123</td>
+							</tr>
+							<tr>
+								<td class="overview_info_1">Overall Throughput (w/h):</td>
+								<td class="overview_info_2">90</td>
+							</tr>
+						</table>
+					</div>
+					<div class="overview_recipe"></div>
+				</td>
+				<td class="overview_status" valign="top">
+					<fieldset>
+						<legend style="color:#0BDCD5;">Wafer</legend>
+						<div><label class="Manual" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;">Manual</label></div>
+						<div><label class="Unprocessed" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;margin-top:-1em;">Unprocessed</label></div>
+						<div><label class="Processing" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;">Processing</label></div>
+						<div><label class="Completed" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;">Completed</label></div>
+						<div><label class="Failed" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;">Failed</label></div>
+						<div><label class="Warning" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><label style="margin-left:10px;">Warning</label></div>
+					</fieldset>
+					<div class="overview_btn">
+							<button class="short_btn">Auto</button>
+							<button class="short_btn">Stop</button>
+							<button class="short_btn">Abort</button>
+							<button class="short_btn">Pause</button>
+							<button class="long_btn">Load Recipe</button>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
