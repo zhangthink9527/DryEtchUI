@@ -143,7 +143,7 @@ body
     -webkit-border-radius : 10px;   /* Webkit browsers */
     border-radius : 10px;            /* W3C syntax */
 	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#015766));
-	width : 200px;
+	width : 180px;
 	height : 500px;
 	margin-left : 20px;
 }
