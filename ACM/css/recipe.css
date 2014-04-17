@@ -27,7 +27,7 @@
 
 body 
 {
-	background-color : #053C4C;
+	background-color : #07292F;
 	font-family:Arial,Helvetica,sans-serif;
 }
 
@@ -84,7 +84,7 @@ body
 	-moz-border-radius : 10px;      /* Gecko browsers */
     -webkit-border-radius : 10px;   /* Webkit browsers */
     border-radius : 10px;            /* W3C syntax */
-	background-color : #013335;
+	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#015766));
 	width : 200px;
 	height : 500px;
 }
@@ -142,7 +142,7 @@ body
 	-moz-border-radius : 10px;      /* Gecko browsers */
     -webkit-border-radius : 10px;   /* Webkit browsers */
     border-radius : 10px;            /* W3C syntax */
-	background-color : #013335;
+	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#015766));
 	width : 200px;
 	height : 500px;
 	margin-left : 20px;
@@ -174,7 +174,7 @@ body
 	-moz-border-radius : 10px;      /* Gecko browsers */
     -webkit-border-radius : 10px;   /* Webkit browsers */
     border-radius : 10px;            /* W3C syntax */
-	background-color : #013335;
+	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#015766));
 	width : 865px;
 	height : 500px;
 	overflow-y:hidden;
