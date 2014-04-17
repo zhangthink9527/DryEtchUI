@@ -31,6 +31,19 @@ body
 	font-family:Arial,Helvetica,sans-serif;
 }
 
+.logo
+{
+	height : 100px;
+}
+
+.mainWin
+{
+	width : auto;
+	margin-left: 5%;
+	margin-right: 5%;
+	height : 800px;
+}
+
 .messagealert
 {
 	position : absolute;
@@ -162,51 +175,60 @@ body
     -webkit-border-radius : 10px;   /* Webkit browsers */
     border-radius : 10px;            /* W3C syntax */
 	background-color : #013335;
-	width : 910px;
+	width : 865px;
 	height : 500px;
-	white-space:nowrap;
+	overflow-y:hidden;
 	
 }
 
-.recipevaluebox > div
+.recipevaluebox1
 {
-	width : auto;
+	width : 865px;
+	height:88%;
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+
+.recipevaluebox1   table
+{
 	margin-top:5px;
-	height : 84%;
-	overflow: auto;
-	white-space:nowrap;
-	
+	height:88%;
+	margin-left:5px;
+	table-layout: fixed;
+	overflow-x:scroll;
+	overflow-y:hidden;
 }
 
-.recipevaluebox > div > div
+.recipevaluebox1   td
 {
-	width : 90px;
-	margin-left : 10px;
-	float : left;
-	padding-top : 5px;
+	width:90px;
 	padding-bottom: 0px;
 	margin-bottom:0px;
+	padding-left:0px;
+	padding-right:0px;
+	margin-left:3px;
+	
 } 
 
-.recipevaluebox > div > div > span
+.recipevaluebox1 > table  tr > td > span
 {
 	margin-left : 31px;
-	margin-top : 5px;
 	padding : 0px;
 }
 
-.recipevaluebox > div > div > span > label
+.recipevaluebox1 > table  tr > td  > span > label
 {
 	color : #fff;
 }
-.recipevalue ul
+.recipevaluebox1 > table  tr > td    ul
 {
 	list-style-type : none;
 	padding : 0px;
 	margin-top : 8px;
+	width : 90px;
 }
 
-.recipevalue ul  > li
+.recipevaluebox1 > table  tr > td  >  ul > li
 {
 	border-top : 1px solid #0A98AE;
 	border-bottom : 1px solid #042A30;
@@ -257,7 +279,7 @@ body
     -webkit-border-radius : 5px;   /* Webkit browsers */
     border-radius : 5px;            /* W3C syntax */
 	margin-left : 30px;
-	margin-top : 25px;
+	margin-top : 15px;
 	width : 80px;
 	height : 30px;
 	font-weight : bold;
@@ -267,9 +289,4 @@ body
 .stepbtn  button:hover
 {
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#0D6FD0));
-}
-
-.unsave
-{
-	color : #AF0505;
 }
