@@ -5,12 +5,12 @@ var unSaveRecipeList = {};
 
 function addOneStep()
 {
-	var num = parseInt(jQuery(".recipevaluebox").find("div:first").children("div:last").find("label").text()) + 1;
+	var num = parseInt(jQuery(".recipevaluebox1").find(".stepitem:last").find("label").text()) + 1;
 	if (isNaN(num))
 	{
 		num = 1;
 	}
-	var stepstr = '<div>' +
+	var stepstr = '<td class="stepitem">' +
 					'<span>' +
 						'<input type="checkbox"/><label>' + num + '<label>' +
 					'</span>' +
@@ -45,17 +45,17 @@ function addOneStep()
 						'<li><input type="text" value="0"/></li>' +
 						'<li><input type="text" value="0"/></li>' +
 					'</ul>' +
-				'</div>';
-	jQuery(".recipevaluebox").find("div:first").append(stepstr);
+				'</td>';
+	jQuery(".recipevaluebox").find("table").find("tr").append(stepstr);
 	jQuery(".recipeselect").css("color", "#AF0505");
 	jQuery(".recipeselect").attr("isSave", "false");
 	
-	jQuery(".recipevaluebox").children("div").children("div").children("ul").find("input").change(function() {
+	jQuery(".recipevaluebox1").find(".stepitem").children("ul").find("input").change(function() {
 		jQuery(".recipeselect").css("color", "#AF0505");
 		jQuery(".recipeselect").attr("isSave", "false");
 	});
 		
-	jQuery(".recipevaluebox").find("select").change(function() {
+	jQuery(".recipevaluebox1").find("select").change(function() {
 		jQuery(".recipeselect").css("color", "#AF0505");
 		jQuery(".recipeselect").attr("isSave", "false");
 	});
@@ -64,7 +64,7 @@ function addOneStep()
 function deleteStep()
 {
 	var flag = false;
-	jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+	jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 		if (jQuery(this).find("span").find("input")[0].checked)
 		{
 			flag = true;
@@ -79,7 +79,7 @@ function deleteStep()
 	}
 	
 	Dialog.confirm("<label style='font-size:14px;'>Do you want to delete this Step?</label>", function(){
-		jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+		jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 			if (jQuery(this).find("span").find("input")[0].checked)
 			{
 				jQuery(this).remove();
@@ -87,7 +87,7 @@ function deleteStep()
 		});
 		
 		var i = 1;
-		jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+		jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 			jQuery(this).find("span").find("label").text(i);
 			i = i + 1;
 		});
@@ -99,7 +99,7 @@ function deleteStep()
 
 function copyStep()
 {
-	jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+	jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 		if (jQuery(this).find("span").find("input")[0].checked)
 		{
 			ClipBoard.push(this);
@@ -109,7 +109,7 @@ function copyStep()
 
 function pasteStep()
 {
-	var num = parseInt(jQuery(".recipevaluebox").find("div:first").children("div:last").find("label").text()) + 1;
+	var num = parseInt(jQuery(".recipevaluebox1").find(".stepitem:last").find("label").text()) + 1;
 	if (isNaN(num))
 	{
 		num = 1;
@@ -122,7 +122,7 @@ function pasteStep()
 		This = jQuery(This);
 		This.find("span").find("label").text(num);
 		This.find("span").find("input")[0].checked = false;
-		jQuery(".recipevaluebox").find("div:first")[0].appendChild(jQuery(This)[0]);
+		jQuery(".recipevaluebox1").find("tr")[0].appendChild(jQuery(This)[0]);
 		num = num + 1;
 	}
 	
@@ -131,12 +131,12 @@ function pasteStep()
 		jQuery(".recipeselect").css("color", "#AF0505");
 		jQuery(".recipeselect").attr("isSave", "false");
 		
-		jQuery(".recipevaluebox").children("div").children("div").children("ul").find("input").change(function() {
+		jQuery(".recipevaluebox1").find(".stepitem").children("ul").find("input").change(function() {
 				jQuery(".recipeselect").css("color", "#AF0505");
 				jQuery(".recipeselect").attr("isSave", "false");
 			});
 			
-		jQuery(".recipevaluebox").find("select").change(function() {
+		jQuery(".recipevaluebox1").find("select").change(function() {
 			jQuery(".recipeselect").css("color", "#AF0505");
 			jQuery(".recipeselect").attr("isSave", "false");
 		});
@@ -146,7 +146,7 @@ function pasteStep()
 function cutStep()
 {
 	var flag = false;
-	jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+	jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 		if (jQuery(this).find("span").find("input")[0].checked)
 		{
 			flag = true;
@@ -233,7 +233,7 @@ function showSelectRecipe(fs, This)
 			var rJsonStr = fs.readFileSync(recipedir + '/' + rName + '.rcp');
 			if (rJsonStr == "")
 			{
-				jQuery(".recipevaluebox").find("div:first").children().remove();
+				jQuery(".recipevaluebox1").find(".stepitem").remove();
 				return;
 			}
 			rJson = jQuery.parseJSON(rJsonStr);
@@ -252,7 +252,7 @@ function showSelectRecipe(fs, This)
 		var steplist = "";
 		for (var i = 0; i < steps.length; ++i)
 		{
-			steplist += '<div>' +
+			steplist += '<td class="stepitem">' +
 							'<span>' +
 								'<input type="checkbox"/><label>' + (i + 1) + '<label>' +
 							'</span>' +
@@ -333,18 +333,18 @@ function showSelectRecipe(fs, This)
 						'<li><input type="text" value="' + steps[i]["N2"] + '"/></li>' +
 						'<li><input type="text" value="' + steps[i]["N2 Purge"] + '"/></li>' +
 						'</ul>' +
-						'</div>';
+						'</td>';
 		}
 				
-		jQuery(".recipevaluebox").find("div:first").children().remove();
-		jQuery(".recipevaluebox").find("div:first").append(steplist);
+		jQuery(".recipevaluebox1").find(".stepitem").remove();
+		jQuery(".recipevaluebox1").find("tr").append(steplist);
 		
-		jQuery(".recipevaluebox").children("div").children("div").children("ul").find("input").change(function() {
+		jQuery(".recipevaluebox1").find(".stepitem").children("ul").find("input").change(function() {
 			jQuery(".recipeselect").css("color", "#AF0505");
 			jQuery(".recipeselect").attr("isSave", "false");
 		});
 		
-		jQuery(".recipevaluebox").find("select").change(function() {
+		jQuery(".recipevaluebox1").find("select").change(function() {
 			jQuery(".recipeselect").css("color", "#AF0505");
 			jQuery(".recipeselect").attr("isSave", "false");
 		});
@@ -360,7 +360,7 @@ function domToJson()
 	rJson["Version"] = version ? version : "1.0";
 	rJson["Steps"] = [];
 	
-	jQuery(".recipevaluebox").find("div:first").children("div").each(function(){
+	jQuery(".recipevaluebox1").find(".stepitem").each(function(){
 		var stepObj = {};
 		var lis = jQuery(this).children("ul").children("li");
 		stepObj["Name"] = jQuery(lis[0]).children("input").val();
@@ -443,7 +443,7 @@ function recipeDelete()
 {
 	if (!fs.existsSync(recipedir))
 	{
-		jQuery(".recipevaluebox").find("div:first").children().remove();
+		jQuery(".recipevaluebox1").find(".stepitem").remove();
 		jQuery(".recipeselect").remove();
 		return;
 	}
@@ -454,7 +454,7 @@ function recipeDelete()
 		Dialog.confirm("<label style='font-size:14px;'>Do you want to delete this Recipe?</label>", function(){
 			var rName = jQuery(".recipeselect").text();
 			fs.unlink(recipedir + '/' + rName + ".rcp", function(err){
-				jQuery(".recipevaluebox").find("div:first").children().remove();
+				jQuery(".recipevaluebox1").find("select").remove();
 				jQuery(".recipeselect").remove();
 			});
 		});
@@ -499,7 +499,7 @@ function recipeAdd()
 		li.click(function(){
 			showSelectRecipe(fs, this);
 		});
-		jQuery(".recipevaluebox").find("div:first").children().remove();
+		jQuery(".recipevaluebox1").find(".stepitem").remove();
 		jQuery(this).remove();
 	});
 }
