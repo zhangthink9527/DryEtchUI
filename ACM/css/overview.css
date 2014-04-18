@@ -9,6 +9,11 @@
 	height:60px;
 }
 
+.overview > table
+{
+	width : 1450px;
+}
+
  .overview_turntable
  {
 	width : 800px;
