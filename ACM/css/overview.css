@@ -28,7 +28,7 @@
 	-moz-border-radius : 8px;      /* Gecko browsers */
     -webkit-border-radius : 8px;   /* Webkit browsers */
     border-radius : 8px;            /* W3C syntax */
-	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#0D6075));
+	background: -webkit-gradient(linear, left top, left bottom, from(#01202A), to(#07495F));
 }
 
 .overview_info
@@ -86,7 +86,7 @@
 	-moz-border-radius : 8px;      /* Gecko browsers */
     -webkit-border-radius : 8px;   /* Webkit browsers */
     border-radius : 8px;            /* W3C syntax */
-	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#0D6075));
+	background: -webkit-gradient(linear, left top, left bottom, from(#01202A), to(#07495F));
 	width:130px;
 	height : 350px;
 	margin-top:30px;
@@ -135,7 +135,7 @@
 	-moz-border-radius : 8px;      /* Gecko browsers */
     -webkit-border-radius : 8px;   /* Webkit browsers */
     border-radius : 8px;            /* W3C syntax */
-	background: -webkit-gradient(linear, left top, left bottom, from(#053A44), to(#0D6075));
+	background: -webkit-gradient(linear, left top, left bottom, from(#01202A), to(#07495F));
 	color:#ABB2B4;
 	margin-top:-5px;
 	font-size:12px;
