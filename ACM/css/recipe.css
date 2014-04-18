@@ -1,28 +1,37 @@
 ::-webkit-scrollbar{  
     width:14px; 
-	margin-top : 10px;
+	scrollbar-arrow-color:
 }  
 
+::-webkit-scrollbar-button
+{
+	background-color:#045D7A;
+}
+
+
 ::-webkit-scrollbar-track{  
-    background-color:#053C4C;
+    background-color:#045D7A;
 }
 
 ::-webkit-scrollbar-track-piece{  
     background-color:#053C4C;
-    -webkit-border-radius:4px;
+    -webkit-border-radius:10px;
 }  
 
 ::-webkit-scrollbar-thumb{  
-    background-color:#16707E;   
-    border-radius:4px;   
+    background-color:#025C61;   
+    border-radius:10px;  
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);	
 }  
+
+::-webkit-scrollbar-button-arrow
+{
+	background-color:#fff;
+}
 
 ::-webkit-scrollbar-corner {  
-	background-color: #053C4C;  
-}  
-
-::-webkit-scrollbar-thumb:hover{  
-    background-color : 0B6A81;  
+	background: #187B9C;  
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }  
 
 body 
