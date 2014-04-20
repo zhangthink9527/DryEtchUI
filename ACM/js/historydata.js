@@ -1,82 +1,108 @@
-﻿$(function () {
-    $('#container').highcharts({
-        title: {
-            text: 'Monthly Average Temperature',
-            x: -20 //center
-        },
-        subtitle: {
-            text: 'ACM',
-            x: -20
-        },
-        xAxis: {
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        },
-        yAxis: {
-            title: {
-                text: 'Temperature (°C)'
-            },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        //            tooltip: {
-        //                formatter: function () {
-        //                    return "aa"
-        //                } 
-        //            },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'Tokyo',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-        }, {
-            name: 'New York',
-            data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-        }, {
-            name: 'Berlin',
-            data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-        }, {
-            name: 'London',
-            data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-        }]
+﻿var Chart1, scroller,tip;
+
+function draw(results) {
+    Chart1 = new Tee.Chart("canvas");
+     Chart1.axes.bottom.labels.dateFormat = "isoTime";
+    var series1 = Chart1.addSeries(new Tee.Line());
+    series1.addRandom(results.length);
+    series1.data.x = new Array(series1.count());
+    for (t = 0; t < series1.count(); t++) {
+        tmp = new Date(results[t]['time']);
+        series1.data.x[t] = tmp;
+        series1.data.values[t] = results[t]['data'];
+    }
+    Chart1.title.text = "Chart For ACM";
+    Chart1.panel.transparent = true;
+    Chart1.legend.visible = false;
+    var x1 = series1.data.x;
+    Chart1.axes.bottom.setMinMax(x1[20].getTime(), x1[40].getTime());
+    Chart1.axes.bottom.labels.roundFirst = true;
+    Chart1.zoom.enabled = false;
+    Chart1.scroll.mouseButton = 0;
+    Chart1.scroll.direction = "horizontal";
+    scroller = new Tee.Scroller("canvas2", Chart1);
+    scroller.onChanging = function (s, min, max) {
+//        var mi = new Date(min);//.toDateString(),
+//        ma = new Date(max);//.toDateString();
+//        document.getElementById("data").textContent = "Showing data from " + mi + " to " + ma;
+    }
+    tip = new Tee.ToolTip(Chart1);
+    Chart1.tools.add(tip);
+    tip.ongettext = function (tool, text, series, index) {
+        if (tip.render == "dom")
+            return 'Value: ' + series.data.values[index];
+        else
+            return 'Value: ' + series.data.values[index];
+        //        return 'Value: ' + series.data.values[index].toFixed(2);
+    }
+   // Chart1.axes.bottom.labels.visible = false;
+    //    Chart1.axes.bottom.labels.visible = false;
+   // Chart1.axes.bottom.labels.dateFormat = "default";
+    Chart1.draw();
+}
+
+
+function testConnectMysql() {
+    var fs = require('fs');
+    var connect = $.parseJSON(fs.readFileSync('./../data/database.json'));
+    var mysql = require('mysql');
+    var TEST_DATABASE = connect.database.database; //  'test';
+
+    var connection = mysql.createConnection({
+        host: connect.database.host,
+        user: connect.database.user,
+        password: connect.database.password,
+        port: connect.database.port
     });
-//    testConnectMysql();
-});
 
-
-    function testConnectMysql() {
-       var mysql = require('mysql');
-        var TEST_DATABASE = 'test';
-        var TEST_TABLE = 'mytable';
-
-var connection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : 'root'
-});
-
-connection.query('USE '+TEST_DATABASE);
-
-connection.query(
-  'SELECT * FROM '+TEST_TABLE,
-  function selectCb(err, results, fields) 
-  {
-    if (err) { throw err; }
-    for(var i = 0;i < results.length; ++i)
-    {
-        var data = 'id: ' + results[i]['id'] + ' name:' + results[i]['firstname']; 
-        console.log(data);
+    connection.query('USE ' + TEST_DATABASE);
+    //var data = Math.random() * 100;
+    //console.log('call dry_etch.record_data(DATE_ADD(now(), INTERVAL ' + 1 + ' SECOND), "HF",' + data + ');');
+    //connection.query('call dry_etch.record_data(DATE_ADD(now(), INTERVAL ' + 1 + ' SECOND), "HF",' + data + ');');
+    for (var i = 0; i < 10000; i++) {
+        var data = Math.random() * 100;
+        connection.query('call dry_etch.record_data(DATE_ADD(now(), INTERVAL ' + i + ' SECOND), "HF",' + data + ');');
     }
-    console.log(results);
-    console.log(fields);
-    connection.end();
-  }
-);
+}
+
+function getData() {
+    var begin = $("#txBeginTime").val();
+    var end = $("#txEndTime").val();
+    if (begin == "") {
+        alert("Begin Time can be null,please input begin time");
+        return;
     }
+    if (end == "") {
+        alert("End Time can be null,please input end time");
+        return;
+    }
+    var type = $("#ddlType").val();
+    var fs = require('fs');
+    var connect = $.parseJSON(fs.readFileSync('./../node-webkit/config/database.json'));
+    var mysql = require('mysql');
+    var TEST_DATABASE = connect.database.database; //  'test';
+
+    var connection = mysql.createConnection({
+        host: connect.database.host,
+        user: connect.database.user,
+        password: connect.database.password,
+        port: connect.database.port
+    });
+    connection.query('USE ' + TEST_DATABASE);
+    var sql = 'SELECT  * FROM process_data where type="' + type + '" and time>="' + begin + '" and time <="' + end + '" limit 1500';
+    console.log(sql);
+    connection.query(
+      sql,
+      function selectCb(err, results, fields) {
+          if (err) { throw err; }
+          if (results.length > 0) {
+              draw(results);
+          }
+          else {
+              alert("No data get it");
+          }
+          connection.end();
+      }
+    );
+
+}

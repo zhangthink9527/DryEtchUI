@@ -25,9 +25,9 @@ $(document).ready(function () {
             var arrayObj = ["broken", "processed", "processing", "unprocessed", "semiprocessed"];
             var i = 1;
             setIntervalID = setInterval(function () {
-                var p1 = getPoints( (6 * i) % 360);
-                var p2 = getPoints( (6 * i + 120) % 360);
-                var p3 = getPoints( (6 * i + 240) % 360);
+                var p1 = getPoints((6 * i) % 360);
+                var p2 = getPoints((6 * i + 120) % 360);
+                var p3 = getPoints((6 * i + 240) % 360);
                 $("#firstWinfer").attr("style", "position: absolute; left:" + p1[0] + "px; top:" + p1[1] + "px");
                 $("#secondWinfer").attr("style", "position: absolute; left:" + p2[0] + "px; top:" + p2[1] + "px");
                 $("#thirdWinfer").attr("style", "position: absolute; left:" + p3[0] + "px; top:" + p3[1] + "px");
@@ -73,8 +73,8 @@ $(document).ready(function () {
 
      });
 
-
-
+   
+    setPropertyChange(updateProperty);
 
 });
 
@@ -88,9 +88,12 @@ function mouseCoords(ev) {
         console.log(ev.pageX + "," + ev.pageY)
         return { x: ev.pageX, y: ev.pageY };
     }
-    alert("bbb");
     return {
         x: ev.clientX + document.body.scrollLeft - document.body.clientLeft,
         y: ev.clientY + document.body.scrollTop - document.body.clientTop
     };
-} 
+}
+
+var updateProperty = function (data) {
+    console.log(data.parameters[0].id);
+}

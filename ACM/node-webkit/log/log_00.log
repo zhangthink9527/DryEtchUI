@@ -1,0 +1,1 @@
+[2014-Apr-19 18:52:19.577294]	<fatal>	(0x000020e0) : error code: 1045, error message: Access denied for user 'acm'@'localhost' (using password: YES)

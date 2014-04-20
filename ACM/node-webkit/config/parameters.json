@@ -1,0 +1,27 @@
+{
+    "Parameters":
+    {
+        "Motion":
+        {
+            "Motor":
+            {
+                "RotateSpeed": "50",
+                "H2Flow": "300"
+            }
+        },
+        "Heater":
+        {
+            "Plate":
+            {
+                "PlateTemperature": "20"
+            }
+        },
+        "System":
+        {
+            "Efem":
+            {
+                "IP": "192.168.0.100"
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "Blocks":
+    [
+	    {
+	    	"ID": "0",
+	        "Name": "DI",
+	        "Variable": ".stVariableGeneralDX",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "128",
+	        "WriteStart": "128",
+	        "WriteEnd": "128"
+	    },
+	    {
+	    	"ID": "1",
+	        "Name": "DO",
+	        "Variable": ".stVariableGeneralDY",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "0",
+	        "WriteStart": "0",
+	        "WriteEnd": "160"
+	    },
+ 	    {
+	    	"ID": "2",
+	        "Name": "AI",
+	        "Variable": ".stVariableGeneralAX",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "80",
+	        "WriteStart": "80",
+	        "WriteEnd": "80"
+	    },
+	    {
+	    	"ID": "3",
+	        "Name": "AO",
+	        "Variable": ".stVariableGeneralAY",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "0",
+	        "WriteStart": "0",
+	        "WriteEnd": "64"
+	    },
+	    {
+	    	"ID": "4",
+	        "Name": "BodyHeater",
+	        "Variable": ".stVariableCCHA1BodyHeater",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "11",
+	        "WriteStart": "11",
+	        "WriteEnd": "19"
+	    },
+	    {
+	    	"ID": "5",
+	        "Name": "LidHeater",
+	        "Variable": ".stVariableCCHA1LidHeater",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "11",
+	        "WriteStart": "11",
+	        "WriteEnd": "19"
+	    },
+	    {
+	    	"ID": "6",
+	        "Name": "ChunkHeater",
+	        "Variable": ".stVariableCCHA1ChunkHeater",
+	        "NetID": "192.168.3.100.1.1",
+	        "port": "801",
+	        "ReadStart": "0",
+	        "ReadEnd": "11",
+	        "WriteStart": "11",
+	        "WriteEnd": "19"
+	    }
+    ]
+}

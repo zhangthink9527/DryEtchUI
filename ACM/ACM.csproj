@@ -60,9 +60,34 @@
     <Content Include="images\chemical_flow.png" />
     <Content Include="images\chemical_flow1.png" />
     <Content Include="images\contract_icon.png" />
+    <Content Include="images\dialog_bg.jpg" />
+    <Content Include="images\dialog_cb.png" />
+    <Content Include="images\dialog_closebtn.gif" />
+    <Content Include="images\dialog_closebtn.png" />
+    <Content Include="images\dialog_closebtn_over.gif" />
+    <Content Include="images\dialog_closebtn_over.png" />
+    <Content Include="images\dialog_ct.png" />
+    <Content Include="images\dialog_footercenter.png" />
+    <Content Include="images\dialog_footerleft.png" />
+    <Content Include="images\dialog_footerright.png" />
+    <Content Include="images\dialog_lb.png" />
+    <Content Include="images\dialog_lt.png" />
+    <Content Include="images\dialog_mc.gif" />
+    <Content Include="images\dialog_mc.png" />
+    <Content Include="images\dialog_mlb.png" />
+    <Content Include="images\dialog_mlm.png" />
+    <Content Include="images\dialog_mlt.png" />
+    <Content Include="images\dialog_mrb.png" />
+    <Content Include="images\dialog_mrm.png" />
+    <Content Include="images\dialog_mrt.png" />
+    <Content Include="images\dialog_rb.png" />
+    <Content Include="images\dialog_rt.png" />
     <Content Include="images\dummy.png" />
     <Content Include="images\empty.png" />
     <Content Include="images\expand_icon.png" />
+    <Content Include="images\icon_alert.gif" />
+    <Content Include="images\icon_dialog.gif" />
+    <Content Include="images\icon_query.gif" />
     <Content Include="images\login_03.gif" />
     <Content Include="images\login_04.gif" />
     <Content Include="images\login_06.gif" />
@@ -74,16 +99,21 @@
     <Content Include="images\semi-processed.png" />
     <Content Include="images\unprocessed.png" />
     <Content Include="js\common.js" />
-    <Content Include="js\exporting.js" />
+    <Content Include="js\date.format.js" />
+    <Content Include="js\Dialog.js" />
     <Content Include="js\gasbox.js" />
     <Content Include="js\goodtree.plugin.js" />
-    <Content Include="js\highcharts.js" />
     <Content Include="js\historydata.js" />
+    <Content Include="js\jquery-2.1.0.js" />
     <Content Include="js\jquery-2.1.0.min.js" />
     <Content Include="js\jquery.contextmenu.r2.js" />
     <Content Include="js\jquery.contextmenu.r2.packed.js" />
     <Content Include="js\overview.js" />
+    <Content Include="js\recipe.js" />
     <Content Include="js\systemconfig.js" />
+    <Content Include="js\teechart-extras.js" />
+    <Content Include="js\teechart.js" />
+    <Content Include="js\WebCalendar.js" />
     <Content Include="page\Default.htm" />
     <Content Include="page\GasBox.htm" />
     <Content Include="page\HistoryData.htm" />
@@ -106,6 +136,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="data\database.json" />
     <None Include="data\parameters.json" />
     <None Include="data\systemdata.json" />
   </ItemGroup>

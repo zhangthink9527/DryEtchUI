@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node.js <script>
-
-       var fs = require('fs');
-       fs.readFile('aaa.txt',function(err,data)
-{
-
-	alert(data);
-
-}
-
-       	);
-        var Sys = {};
-        var ua = navigator.userAgent.toLowerCase();
-        if (window.ActiveXObject)
-            Sys.ie = ua.match(/msie ([\d.]+)/)[1]
-        else if (document.getBoxObjectFor)
-            Sys.firefox = ua.match(/firefox\/([\d.]+)/)[1]
-        else if (window.MessageEvent && !document.getBoxObjectFor)
-            Sys.chrome = ua.match(/chrome\/([\d.]+)/)[1]
-        else if (window.opera)
-            Sys.opera = ua.match(/opera.([\d.]+)/)[1]
-        else if (window.openDatabase)
-            Sys.safari = ua.match(/version\/([\d.]+)/)[1];
-        
-        //以下进行测试
-        if(Sys.ie) document.write('IE: '+Sys.ie);
-        if(Sys.firefox) document.write('Firefox: '+Sys.firefox);
-        if(Sys.chrome) document.write('Chrome: '+Sys.chrome);
-        if(Sys.opera) document.write('Opera: '+Sys.opera);
-        if(Sys.safari) document.write('Safari: '+Sys.safari);
-
-</script>.
-  </body>
+	<head>
+		<style>
+			div
+			{
+				width:500px;
+				height:100px;
+				background-color:#ff9900;
+				box-shadow: 10px 10px 5px #888888;
+			}
+		</style>
+		<script>
+		//	var control = require('./ControlBinder');
+			function initialize()
+			{
+				control.initialize('libControlCore');
+			}
+			function terminate()
+			{
+				control.terminate();
+			}
+			function fetch_parameters()
+			{
+				var json = control.fetch_parameters(0, 100);
+				document.getElementById("output").innerHTML = json;
+			}
+			function modify_parameter()
+			{
+				control.modify_parameter(1, 100);
+				document.getElementById("output").innerHTML = "modify parameter(id=0) to 100.";
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<p> Test commands:</p>
+			<button onclick="initialize()">initialize</button>
+			<button onclick="terminate()">terminate</button>
+			<button onclick="fetch_parameters()">fetch_parameters</button>
+			<button onclick="modify_parameter()">modify_parameter</button>
+		</div>		
+		<div>
+			<p id="output">output</p>
+		</div>		
+	</body>
 </html>

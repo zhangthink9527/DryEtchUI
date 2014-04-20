@@ -6,6 +6,13 @@
     });
 }
 
+function setPropertyChange(func) {
+    setInterval(function () {
+        var data = getSyncJsonData();
+        func(data);
+    },500);
+}
+
         function getSyncJsonData() {
             var fs = require('fs');
            return $.parseJSON(fs.readFileSync('./../data/parameters.json'));

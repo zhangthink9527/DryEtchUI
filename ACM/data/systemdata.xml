@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <systemdata>
-  <DI>
+  <DI hb="77" lb="1">
     <diAlcPrsULmt type="0">
       <min>0</min>
       <max>1</max>
@@ -514,7 +514,7 @@
       <unit></unit>
     </diCbRightDoorClose>
   </DI>
-  <DO>
+  <DO hb="1016" lb="1000">
     <aoRedLight type="0">
       <min>0</min>
       <max>0x101</max>
